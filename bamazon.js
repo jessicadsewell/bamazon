@@ -1,5 +1,6 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
+var Table = require("cli-table");
 // var bamazon = require("./bamazonCustomer")
 
 // create the connection information for the sql database
@@ -17,15 +18,9 @@ var connection = mysql.createConnection({
 // connect to the mysql server and sql database
 connection.connect(function(err) {
   if (err) throw err;
-  console.log("connected as id " + connection.threadId + "\n");
-  readProducts();
+  // console.log("connected as id " + connection.threadId + "\n");
+  
 });
 
-// function readProducts() {
-//   console.log("Selecting all products...\n");
-//   connection.query("SELECT * FROM products", function(err, res) {
-//     if (err) throw err;
-//     // Log all results of the SELECT statement
-//     console.log(res);
-//   });
-// }
+
+module.exports = connection;
