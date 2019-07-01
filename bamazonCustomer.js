@@ -5,7 +5,8 @@ var inquirer = require("inquirer");
 var divider = "\n------------------------------------------------------------\n\n";
 
 function readProducts() {
-    console.log("List of all products for sale:\n");
+    console.log(divider);
+    console.log("WELCOME TO BAMAZON. HERE ARE A LIST OF ALL PRODUCTS FOR SALE:\n");
     connection.query("SELECT * FROM products", function (err, res) {
         if (err) throw err;
         var displayTable = new Table({
@@ -18,7 +19,7 @@ function readProducts() {
             );
         }
         console.log(displayTable.toString());
-        divider;
+        console.log(divider);
         buy();
     });
 }
@@ -31,7 +32,7 @@ function buy() {
         {
             name: "itemID",
             type: "input",
-            message: "What is the ID of the product you would like to buy?",
+            message: "What is the item ID # of the product you would like to buy?",
             filter: Number
         },
         {
@@ -57,10 +58,12 @@ function purchaseOrder(ID, amtNeeded){
 
 			connection.query("UPDATE products SET stock_quantity = stock_quantity - " + amtNeeded + " WHERE id = " + ID);
 		} else{
-			console.log("Insufficient quantity, sorry we do not have enough " + res[0].product_name + " to complete your order.");
+            console.log(divider);
+            console.log("Insufficient quantity, sorry we do not have enough " + res[0].product_name + " to complete your order.");
+            readProducts();
         };
         divider;
-		readProducts();
+		// readProducts();
 	});
 };
 
