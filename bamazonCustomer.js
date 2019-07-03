@@ -60,10 +60,9 @@ function purchaseOrder(ID, amtNeeded){
 		} else{
             console.log(divider);
             console.log("Insufficient quantity, sorry we do not have enough " + res[0].product_name + " to complete your order.");
-            readProducts();
         };
         divider;
-		// readProducts();
+		readProducts();
 	});
 };
 
