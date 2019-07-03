@@ -10,6 +10,8 @@ When the app is launched, a list of products will be displayed including:
 * price (cost to customer)
 * stock_quantity (how much of the product is available in stores)
 
+![Products List Screenshot](/images/Display1.png)
+
 The app will request an id for the item that the customer wishes to purchase and request the quanitity. 
 
 If the items stock-quantity is more than the amount ordered, the app will display "Good News" and calculate the total owed.
