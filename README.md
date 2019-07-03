@@ -14,6 +14,12 @@ When the app is launched, a list of products will be displayed including:
 
 The app will request an id for the item that the customer wishes to purchase and request the quanitity. 
 
+![Products List Screenshot](/images/Display2.png)
+
 If the items stock-quantity is more than the amount ordered, the app will display "Good News" and calculate the total owed.
 
+![Products List Screenshot](/images/Display3.png)
+
 If there are not enough items available, the app will display "Insufficient Quantity" and the product list once more. 
+
+![Products List Screenshot](/images/Display4.png)
