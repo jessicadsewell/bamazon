@@ -10,7 +10,7 @@ function readProducts() {
     connection.query("SELECT * FROM products", function (err, res) {
         if (err) throw err;
         var displayTable = new Table({
-            head: ["Item ID", "Product Name", "Catergory", "Price", "Quantity"],
+            head: ["Item ID", "Product Name", "Department", "Price", "Quantity"],
             colWidths: [10, 25, 25, 10, 14]
         });
         for (var i = 0; i < res.length; i++) {
