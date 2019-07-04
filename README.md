@@ -16,7 +16,7 @@ The app will request an id for the item that the customer wishes to purchase and
 
 ![Products List Screenshot](/images/Display2.png)
 
-If the items stock-quantity is more than the amount ordered, the app will display "Good News" and calculate the total owed.
+If the items stock-quantity is more than the amount ordered, the app will display "Good News" and calculate the total owed. Once the customer gets the "Good News" message, the total quantity will be adjusted to reflect the purchase. 
 
 ![Products List Screenshot](/images/Display3.png)
 
